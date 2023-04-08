@@ -1,5 +1,6 @@
-
+ï»¿
 #include <iostream>
+#include <cstdlib>
 
 struct Address {
     std::string city;
@@ -9,51 +10,50 @@ struct Address {
     int index;
 };
 
-int print(Address* p) {
-    std::cout << "Ãîğîä: " << p->city << std::endl;
-    std::cout << "Óëèöà: " << p->street << std::endl;
-    std::cout << "Íîìåğ äîìà: " << p->house_number << std::endl;
-    std::cout << "Íîìåğ êâàğòèğû: " << p->flat_number << std::endl;
-    std::cout << "Èíäåêñ: " << p->index << std::endl;
-
-    return (0);
+void print(Address* p) {
+    std::cout << "Ğ“Ğ¾Ñ€Ğ¾Ğ´: " << p->city << std::endl;
+    std::cout << "Ğ£Ğ»Ğ¸Ñ†Ğ°: " << p->street << std::endl;
+    std::cout << "ĞĞ¾Ğ¼ĞµÑ€ Ğ´Ğ¾Ğ¼Ğ°: " << p->house_number << std::endl;
+    std::cout << "ĞĞ¾Ğ¼ĞµÑ€ ĞºĞ²Ğ°Ñ€Ñ‚Ğ¸Ñ€Ñ‹: " << p->flat_number << std::endl;
+    std::cout << "Ğ˜Ğ½Ğ´ĞµĞºÑ: " << p->index << std::endl;
 }
-int main()
+int main(int argc, char* argv[])
 {
     setlocale(LC_ALL, "");
+    std::system("chcp 1251");
 
-    Address* address_array = new Address[20]; // ñîçäàëè ìàññèâ ıêçåìïëÿğîâ ñòğóêòóğû
-    std::cout << "Åñëè õîòèòå ââåñòè ñ êëàâèàòóğû àäğåñ, òî íàáåğèòå öèôğó 1 è íàæìèòå êëàâèøó Enter, åñëè íå õîòèòå ââîäèòü íîâûé àäğåñ, òî íàáåğèòå öèôğó 0 è íàæìèòå êëàâèøó Enter" << std::endl;
+    std::cout << "Ğ•ÑĞ»Ğ¸ Ñ…Ğ¾Ñ‚Ğ¸Ñ‚Ğµ Ğ²Ğ²ĞµÑÑ‚Ğ¸ Ñ ĞºĞ»Ğ°Ğ²Ğ¸Ğ°Ñ‚ÑƒÑ€Ñ‹ Ğ°Ğ´Ñ€ĞµÑ, Ñ‚Ğ¾ Ğ½Ğ°Ğ±ĞµÑ€Ğ¸Ñ‚Ğµ Ñ†Ğ¸Ñ„Ñ€Ñƒ 1 Ğ¸ Ğ½Ğ°Ğ¶Ğ¼Ğ¸Ñ‚Ğµ ĞºĞ»Ğ°Ğ²Ğ¸ÑˆÑƒ Enter, ĞµÑĞ»Ğ¸ Ğ½Ğµ Ñ…Ğ¾Ñ‚Ğ¸Ñ‚Ğµ Ğ²Ğ²Ğ¾Ğ´Ğ¸Ñ‚ÑŒ Ğ½Ğ¾Ğ²Ñ‹Ğ¹ Ğ°Ğ´Ñ€ĞµÑ, Ñ‚Ğ¾ Ğ½Ğ°Ğ±ĞµÑ€Ğ¸Ñ‚Ğµ Ñ†Ğ¸Ñ„Ñ€Ñƒ 0 Ğ¸ Ğ½Ğ°Ğ¶Ğ¼Ğ¸Ñ‚Ğµ ĞºĞ»Ğ°Ğ²Ğ¸ÑˆÑƒ Enter" << std::endl;
     int a;
     std::cin >> a;
     if (a == 1) {
 
-        std::cout << "Ââåäèòå êîëè÷åñòâî àäğåñîâ, êîòîğûå Âû áóäóò ââîäèòü, äëÿ ıòîãî ïğîñòî íàáåğèòå íóæíîå ÷èñëî è íàæàòü êëàâèøó Enter" << std::endl;
+        std::cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ ĞºĞ¾Ğ»Ğ¸Ñ‡ĞµÑÑ‚Ğ²Ğ¾ Ğ°Ğ´Ñ€ĞµÑĞ¾Ğ², ĞºĞ¾Ñ‚Ğ¾Ñ€Ñ‹Ğµ Ğ’Ñ‹ Ğ±ÑƒĞ´ĞµÑ‚Ğµ Ğ²Ğ²Ğ¾Ğ´Ğ¸Ñ‚ÑŒ, Ğ´Ğ»Ñ ÑÑ‚Ğ¾Ğ³Ğ¾ Ğ¿Ñ€Ğ¾ÑÑ‚Ğ¾ Ğ½Ğ°Ğ±ĞµÑ€Ğ¸Ñ‚Ğµ Ğ½ÑƒĞ¶Ğ½Ğ¾Ğµ Ñ‡Ğ¸ÑĞ»Ğ¾ Ğ¸ Ğ½Ğ°Ğ¶Ğ°Ñ‚ÑŒ ĞºĞ»Ğ°Ğ²Ğ¸ÑˆÑƒ Enter" << std::endl;
         int i = 0;
         std::cin >> i;
-        Address* address_array = new Address[i]; // ñîçäàëè ìàññèâ ıêçåìïëÿğîâ ñòğóêòóğû
+        Address* address_array = new Address[i]; // ÑĞ¾Ğ·Ğ´Ğ°Ğ»Ğ¸ Ğ¼Ğ°ÑÑĞ¸Ğ² ÑĞºĞ·ĞµĞ¼Ğ¿Ğ»ÑÑ€Ğ¾Ğ² ÑÑ‚Ñ€ÑƒĞºÑ‚ÑƒÑ€Ñ‹
         for (int j = 0; j < i; j++) {
             std::cout << "" << std::endl;
-            std::cout << "Íà÷èíàéòå ââîäèòü àäğåñ!" << std::endl;
+            std::cout << "ĞĞ°Ñ‡Ğ¸Ğ½Ğ°Ğ¹Ñ‚Ğµ Ğ²Ğ²Ğ¾Ğ´Ğ¸Ñ‚ÑŒ Ğ°Ğ´Ñ€ĞµÑ!" << std::endl;
 
-            std::cout << "Ââåäèòå íàçâàíèå ãîğîäà: ";
+            std::cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ Ğ½Ğ°Ğ·Ğ²Ğ°Ğ½Ğ¸Ğµ Ğ³Ğ¾Ñ€Ğ¾Ğ´Ğ°: ";
             std::cin >> address_array[j].city;
-            std::cout << "Ââåäèòå íàçâàíèå óëèöû: ";
+            std::cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ Ğ½Ğ°Ğ·Ğ²Ğ°Ğ½Ğ¸Ğµ ÑƒĞ»Ğ¸Ñ†Ñ‹: ";
             std::cin >> address_array[j].street;
-            std::cout << "Ââåäèòå íîìåğ äîìà: ";
+            std::cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ Ğ½Ğ¾Ğ¼ĞµÑ€ Ğ´Ğ¾Ğ¼Ğ°: ";
             std::cin >> address_array[j].house_number;
-            std::cout << "Ââåäèòå íîìåğ êâàğòèğû: ";
+            std::cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ Ğ½Ğ¾Ğ¼ĞµÑ€ ĞºĞ²Ğ°Ñ€Ñ‚Ğ¸Ñ€Ñ‹: ";
             std::cin >> address_array[j].flat_number;
-            std::cout << "Ââåäèòå èíäåêñ: ";
+            std::cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ Ğ¸Ğ½Ğ´ĞµĞºÑ: ";
             std::cin >> address_array[j].index;
             std::cout << "" << std::endl;
             print(&address_array[j]);
         }
+        delete[] address_array;
     }
     else if ( a == 0) {
-        std::cout << "Âû îòêçàëèñü ââîäèòü àäğåñà, äî ñâèäàíüÿ. ";
+        std::cout << "Ğ’Ñ‹ Ğ¾Ñ‚ĞºĞ°Ğ·Ğ°Ğ»Ğ¸ÑÑŒ Ğ²Ğ²Ğ¾Ğ´Ğ¸Ñ‚ÑŒ Ğ°Ğ´Ñ€ĞµÑĞ°, Ğ´Ğ¾ ÑĞ²Ğ¸Ğ´Ğ°Ğ½ÑŒÑ. ";
     }
-    delete[] address_array;
+    
     return 0;
 }
 
